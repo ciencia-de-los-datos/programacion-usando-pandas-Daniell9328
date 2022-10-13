@@ -24,7 +24,7 @@ def pregunta_01():
     """
     num_index = len (tbl0)
     
-    return index_num
+    return num_index
 
 
 def pregunta_02():
