@@ -22,7 +22,7 @@ def pregunta_01():
     40
 
     """
-    index_num = tbl0[1].head()
+    num_index = len (tbl0)
     
     return index_num
 
