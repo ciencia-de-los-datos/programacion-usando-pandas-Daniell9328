@@ -22,7 +22,9 @@ def pregunta_01():
     40
 
     """
-    return
+    index_num = tbl0[1].head()
+    
+    return index_num
 
 
 def pregunta_02():
