@@ -35,7 +35,9 @@ def pregunta_02():
     4
 
     """
-    return
+    columns = len(tbl0.axes[1])
+    
+    return columns
 
 
 def pregunta_03():
