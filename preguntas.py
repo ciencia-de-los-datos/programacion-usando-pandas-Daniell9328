@@ -72,7 +72,7 @@ def pregunta_04():
     Name: _c2, dtype: float64
     """
     
-    _c2_mean_c1 = tbl0.groupby("_c1").agg({"_c2":np.mean})
+    _c2_mean_c1 = tbl0.groupby("_c1")["_c2"].mean()
 
     return _c2_mean_c1
 
