@@ -144,11 +144,7 @@ def pregunta_08():
     39   39   E    5  1998-01-26    44
 
     """
-    import datetime
-
-    dates = pd.to_datetime(tbl0["_c3"], errors = "ignore")
-
-    tbl0["year"]= [dates[index][:4] for index,element in enumerate(dates)]
+    tbl0["suma"] = tbl0["_c0"] + tbl0["_c2"]
     
     return tbl0
 
@@ -168,10 +164,11 @@ def pregunta_09():
     39   39   E    5  1998-01-26  1998
 
     """
-    tbl0["suma"] = tbl0["_c0"] + tbl0["_c2"]
+    dates = pd.to_datetime(tbl0["_c3"], errors = "ignore")
+
+    tbl0["year"]= [dates[index][:4] for index,element in enumerate(dates)]
     
     return tbl0
-
 
 def pregunta_10():
     """
