@@ -160,7 +160,9 @@ def pregunta_09():
     39   39   E    5  1998-01-26  1998
 
     """
-    return
+    tbl0["suma"] = tbl0["_c0"] + tbl0["_c2"]
+    
+    return tbl0
 
 
 def pregunta_10():
