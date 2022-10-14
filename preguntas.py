@@ -110,7 +110,6 @@ def pregunta_06():
     
     return column_c4
 
-
 def pregunta_07():
     """
     Calcule la suma de la _c2 por cada letra de la _c1 del archivo `tbl0.tsv`.
