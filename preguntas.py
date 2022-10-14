@@ -106,7 +106,9 @@ def pregunta_06():
     ['A', 'B', 'C', 'D', 'E', 'F', 'G']
 
     """
-    return
+    column_c4 = str(sorted(tbl1["_c4"].unique())).upper()
+    
+    return column_c4
 
 
 def pregunta_07():
