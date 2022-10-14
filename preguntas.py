@@ -71,7 +71,10 @@ def pregunta_04():
     E    4.785714
     Name: _c2, dtype: float64
     """
-    return
+    
+    _c2_mean_c1 = tbl0.groupby("_c1").agg({"_c2":np.mean})
+
+    return _c2_mean_c1
 
 
 def pregunta_05():
