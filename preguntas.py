@@ -268,7 +268,7 @@ def pregunta_13():
 
     df5 = tbl0.filter(items=("_c0"))
     df5 = tbl0.sort_values("_c0")
-    df5 = df5.drop("suma", axis=1).drop("_c3", axis=1).drop("year", axis=1).drop("_c2", axis=1)
+    #df5 = df5.drop("suma", axis=1).drop("_c3", axis=1).drop("year", axis=1).drop("_c2", axis=1)
 
     df6 = df4.merge(df5, on = "_c0")
     df6 = df6.groupby("_c1")["_c5b"].sum()
