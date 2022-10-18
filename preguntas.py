@@ -191,7 +191,8 @@ def pregunta_10():
         value = sorted(element[1].values)
         value_str = str(sorted(value)).replace(",",":").replace("[", "").replace("]", "").replace(" ", "")
         df = df.append(pd.DataFrame({"_c0" : element[0], "_c1" : [value_str]}), ignore_index = True)
-        
+    
+    df = np.array(df)
     return df.values
 
 
