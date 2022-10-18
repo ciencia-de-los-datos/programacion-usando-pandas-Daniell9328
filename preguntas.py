@@ -184,7 +184,15 @@ def pregunta_10():
     3   D                  1:2:3:5:5:7
     4   E  1:1:2:3:3:4:5:5:5:6:7:8:8:9
     """
-    return
+    data = [value for value in tbl0.groupby("_c1")["_c2"]]
+    df = pd.DataFrame()
+
+    for index, element in enumerate(data):
+        value = sorted(element[1].values)
+        value_str = str(sorted(value)).replace(",",":").replace(" ", "").replace("[", "").replace("]", "")
+        df = df.append(pd.DataFrame({"_c0" : element[0], "_c1" : [value_str]}))
+        
+    return df
 
 
 def pregunta_11():
