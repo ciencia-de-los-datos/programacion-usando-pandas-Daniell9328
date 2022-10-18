@@ -217,7 +217,7 @@ def pregunta_11():
 
     for index, element in enumerate(data2):
         letter = str(sorted(element[1].values))
-        letter_str = letter.replace("[", "").replace("]", "").replace("'","")
+        letter_str = letter.replace("[", "").replace("]", "").replace("'","").replace("","")
         df2 = df2.append(
             pd.DataFrame(
             {"_c0" : element[0], "_c4" : [letter_str]}
