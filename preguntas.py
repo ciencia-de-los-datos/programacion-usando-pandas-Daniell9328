@@ -237,8 +237,13 @@ def pregunta_12():
     38   38                    eee:0,fff:9,iii:2
     39   39                    ggg:3,hhh:8,jjj:5
     """
+    
+    c5 = [(i[1]+":"+str(i[2])) for i in tbl2.values]
+    df3 =tbl2.assign(_c5 = c5)
+    df3 = df3.sort_values("_c5")
+    df3 = df3.groupby(["_c0"], as_index = False).agg({"_c5":",".join})
+    
     return
-
 
 def pregunta_13():
     """
