@@ -188,6 +188,8 @@ def pregunta_10():
     df = tbl0.sort_values("_c2")
     df["_c2"] = df["_c2"].astype(str)
     df = df.groupby(["_c1"], as_index=False).agg({"_c2":":".join})
+    df = df.rename(columns ={"_c1": "_c0"})
+    df = df.rename(columns ={"_c2": "_c1"})
 
     return df
 
@@ -270,4 +272,5 @@ def pregunta_13():
 
     df6 = df4.merge(df5, on = "_c0")
     df6 = df6.groupby(["_c1"], as_index = False).agg({"_c5b": sum})
+    
     return df6
