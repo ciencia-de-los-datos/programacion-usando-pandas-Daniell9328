@@ -190,7 +190,7 @@ def pregunta_10():
     for index, element in enumerate(data):
         value = sorted(element[1].values)
         value_str = str(sorted(value)).replace(",",":").replace(" ", "").replace("[", "").replace("]", "")
-        df = df.append(pd.DataFrame({"_c0" : element[0], "_c1" : [value_str]}))
+        df = df.append(pd.DataFrame({"_c0" : element[0], "_c1" : [value_str]}), ignore_index = True)
         
     return df
 
