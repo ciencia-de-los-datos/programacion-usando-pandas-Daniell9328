@@ -211,8 +211,19 @@ def pregunta_11():
     38   38      d,e
     39   39    a,d,f
     """
-    return
+    
+    data2 = [value for value in tbl1.groupby("_c0")["_c4"]]
+    df2 = pd.DataFrame()
 
+    for index, element in enumerate(data2):
+        letter = str(sorted(element[1].values))
+        letter_str = letter.replace("[", "").replace("]", "")
+        df2 = df2.append(
+            pd.DataFrame(
+            {"_c0" : element[0], "_c4" : [letter_str]}
+            ), ignore_index = True)
+
+    return df2
 
 def pregunta_12():
     """
