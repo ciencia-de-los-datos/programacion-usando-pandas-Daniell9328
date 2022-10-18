@@ -271,7 +271,8 @@ def pregunta_13():
     df5 = df5.drop("suma", axis=1).drop("_c3", axis=1).drop("year", axis=1).drop("_c2", axis=1)
 
     df6 = df4.merge(df5, on = "_c0")
-    df6 = df6.groupby(["_c1"], as_index = False).agg({"_c5b": sum})
     df6 = df6.rename(columns ={"_c5b": ""})
+    df6 = df6.groupby("_c1")[""].sum()
+    
     
     return df6
