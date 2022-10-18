@@ -243,7 +243,7 @@ def pregunta_12():
     df3 = df3.sort_values("_c5")
     df3 = df3.groupby(["_c0"], as_index = False).agg({"_c5":",".join})
     
-    return
+    return df3
 
 def pregunta_13():
     """
