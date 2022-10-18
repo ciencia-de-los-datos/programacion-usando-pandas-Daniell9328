@@ -8,7 +8,6 @@ Utilice los archivos `tbl0.tsv`, `tbl1.tsv` y `tbl2.tsv`, para resolver las preg
 
 """
 import pandas as pd
-import numpy as np
 
 tbl0 = pd.read_csv("tbl0.tsv", sep="\t")
 tbl1 = pd.read_csv("tbl1.tsv", sep="\t")
@@ -193,8 +192,7 @@ def pregunta_10():
         value_str = str(sorted(value)).replace(",",":").replace("[", "").replace("]", "").replace(" ", "")
         df = df.append(pd.DataFrame({"_c0" : element[0], "_c1" : [value_str]}), ignore_index = True)
     
-    df = np.array(df)
-    return df.values
+    return df
 
 
 def pregunta_11():
